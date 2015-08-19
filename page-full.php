@@ -1,10 +1,13 @@
-<?php
+<div class="menu-container clearfix">
+	<?php
 
-/*
-	Template Name: Full Page, No Sidebar
-*/
+	/*
+		Template Name: Full Page, No Sidebar
+	*/
 
-get_header();  ?>
+	get_header();  ?>
+</div>	
+
 
 <div class="main">
   <div class="container">
