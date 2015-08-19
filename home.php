@@ -11,15 +11,14 @@
 
 <div class="main">
   <div class="container">
-    <div>
-
+    <div id="portfolio">
       <?php 
       //custom posts loop
       $portfolioArgs = array(
         "post_type" => "portfolio",
-        "posts_per_page" => 3,
+        "posts_per_page" => 4,
         // "orderby" => "title",
-        // "order" => "ASC",
+        "order" => "ASC",
         ); 
       $portfolioQuery = new WP_Query($portfolioArgs);
       if($portfolioQuery->have_posts()){
@@ -28,11 +27,12 @@
         ?>
         <div class="portfolio-peice clearfix">
           <div class="portfolio-img">
-            <?php the_post_thumbnail('medium'); ?>
+            <?php the_post_thumbnail('large'); ?>
           </div>
           <div class="portfolio-content">
             <h3><?php  the_title(); ?></h3>
             <?php the_content(); ?>
+            <?php the_meta(); ?>
           </div>
         </div>  
         
@@ -43,7 +43,10 @@
       //can reset itself.
       wp_reset_postdata();  
       ?>
-
+    </div> <!--/. #portfolio -->
+    <div id="skills">
+    </div>
+    <div id="contact">
     </div>
   </div> <!-- /.container -->
 </div> <!-- /.main -->
