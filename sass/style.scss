@@ -30,8 +30,19 @@ body {
 	color: #333;
 
 }
+li{
+	display: block;
+}
+a{
+	color: black;
+}
+body{
+	// background: blue;
+}
+
 .main{
 	@include outer-container;
+	// background: white;
 }
 .container {
 	max-width: 1200px;
@@ -53,6 +64,7 @@ body {
 
 //MENU STYLES
 .menu-container{
+	// background: white;
 
 }
 
@@ -64,22 +76,47 @@ body {
 	top:0;
 	left:0;
 	float:left;
+	z-index: 5;
 	
 }
 ul.menu{
-	padding-top: 10%;
+	padding-top: 5%;
 	text-align: center;
 
 }
 ul.menu li{
 	padding: 0;
-	margin: 5% 0;
+	margin: 10% 0;
 	display: block;
+	position: relative;
 }
 ul.menu li a{
 	padding: 0;
 	color: black;
-	background: none;
+	background: none;	
+}
+ul.menu li:after {
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 0;
+	height: 4px;
+	background: black;
+	content: '';
+	transition: width 0.5s;
+	padding: 0;
+}
+ul.menu li a:hover {
+	color: blue;
+}
+
+ul.menu li:hover:after {
+	width: 80%;
+}
+
+#menu-item-59 a{
+	visibility: hidden;
+	width: 100%;
 }
 .home-link-icon {
 	padding: 100px 0 !important;
@@ -99,9 +136,11 @@ ul.menu li a{
 	float: left;
 	text-align: center;
 	display: inline-block;
+	z-index: 7;
 }
 //PORTFOLIO STYLES
 .portfolio-peice{
+	@include shift(-1);
 	margin-bottom: 2%;
 	overflow: hidden;
 	height: 45vh;
@@ -127,6 +166,7 @@ ul.menu li a{
 }
 .portfolio-content{
 	transform: skew(-170deg);
+	padding-left: 7%;
 }
 
 //SKILL STYLES
@@ -135,10 +175,21 @@ ul.menu li a{
 	@include span-columns (3);
 	@include shift (0.5);
 	background:yellow;
+	position: relative;
 }
 .skill-set img{
 	width: 100%;
 }
+
+.skill-set_content {
+	position: absolute;
+	top: 20%;
+	left: 10px;
+	bottom: 15px;
+	right: 10px;
+}
+
+
 //CONTACT STYLES
 #contact{
 	clear: both;
@@ -152,6 +203,7 @@ footer{
 	bottom:0;
 	text-align: center;
 	color: white;
+	z-index: 10;
 }
 
 
