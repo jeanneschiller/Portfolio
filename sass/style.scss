@@ -89,7 +89,17 @@ ul.menu li a{
 	background-repeat: no-repeat;
 	width: 100%;
 }
-
+.textwidget{
+	@include span-columns (2);
+	height: 20vh;
+	background: white;
+	position: fixed;
+	bottom:0;
+	left:0;
+	float: left;
+	text-align: center;
+	display: inline-block;
+}
 //PORTFOLIO STYLES
 .portfolio-peice{
 	margin-bottom: 2%;

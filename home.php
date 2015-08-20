@@ -93,7 +93,6 @@
       wp_reset_postdata();  
       ?>
     </div>
-    <?php dynamic_sidebar( 'social-menu' ); ?>
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 
