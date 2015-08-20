@@ -14,6 +14,7 @@
 @import 'sidebar';
 @import 'comments';
 @import 'footer';
+@import 'colours';
 
 
 /*
@@ -28,7 +29,7 @@ img {
 
 body {
 	color: #333;
-	// background: blue;
+	background: $blue;
 	font-family: 'Open Sans', sans-serif;
 
 }
@@ -36,16 +37,33 @@ li{
 	display: block;
 }
 a{
+	text-decoration: none;
 	color: black;
 }
-
+h3{
+	text-transform: uppercase;
+	border-right: solid 3px black ;
+	padding-right: 2%;
+}//heading for portfolio items
+i.fa{
+	font-size: 25px;
+}
+i.fa:hover{
+	border-bottom: solid 3px black;
+	padding-bottom: 4px;
+	color: black;
+}
+i.fa:focus{
+	color: $blue;
+}
 .main{
-	@include outer-container;
-	// background: white;
+	@include span-columns (12);
+	background: white;
 }
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
+	@include outer-container;
 	@include span-columns (10);
 	@include shift (2);
 	padding-bottom: 10vh;
@@ -63,7 +81,7 @@ a{
 
 //MENU STYLES
 .menu-container{
-	// background: white;
+	background: white;
 
 }
 
@@ -81,6 +99,7 @@ a{
 ul.menu{
 	padding-top: 5%;
 	text-align: center;
+	text-transform: uppercase;
 
 }
 ul.menu li{
@@ -106,7 +125,10 @@ ul.menu li:after {
 	padding: 0;
 }
 ul.menu li a:hover {
-	color: blue;
+	font-weight: 700;
+}
+ul.menu li a:focus {
+	font-weight: 700;
 }
 
 ul.menu li:hover:after {
@@ -138,6 +160,7 @@ ul.menu li:hover:after {
 	z-index: 7;
 }
 //PORTFOLIO STYLES
+
 .portfolio-peice{
 	@include span-columns (13);
 	@include shift(-1.5);
@@ -163,22 +186,28 @@ ul.menu li:hover:after {
 	background: white;
 	position: absolute;
 	right: 7%;
+	padding-top: 5%;
 }
 .portfolio-content{
 	transform: skew(-170deg);
 	padding-left: 7%;
+	text-align: right;
 }
 
 //SKILL STYLES
 #skills{
 	clear: both;
+
 }
 .skill-set{
 	float: left;
 	@include span-columns (3);
 	@include shift (0.5);
-	background:yellow;
 	position: relative;
+	transition: all 2s cubic-bezier(0,0,0,1); 
+	margin-top: 50px;
+	margin-bottom: 50px;
+
 }
 .skill-set img{
 	width: 100%;
@@ -190,6 +219,7 @@ ul.menu li:hover:after {
 	left: 10px;
 	bottom: 15px;
 	right: 10px;
+	text-align: center;
 }
 
 

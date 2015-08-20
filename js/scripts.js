@@ -4,10 +4,10 @@ $(function(){
 
 	//background fill
 	$(".skill-set").mouseover(function(){
-    	$(".skill-set").css("background-color", "yellow");
+    	$(this).css("background-color", "#E5CD54");
     });
     $(".skill-set").mouseout(function(){
-        $(".skill-set").css("background-color", "lightgray");
+        $(this).css("background-color", "#53BDAF");
     });
 
 });
