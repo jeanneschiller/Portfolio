@@ -45,8 +45,52 @@
       ?>
     </div> <!--/. #portfolio -->
     <div id="skills">
+      <?php 
+      //contact posts loop
+      $skillArgs = array(
+        "post_type" => "skill",
+        "posts_per_page" => 3,
+        ); 
+      $skillQuery = new WP_Query($skillArgs);
+      if($skillQuery->have_posts()){
+        while($skillQuery->have_posts()){
+          $skillQuery->the_post();
+        ?>
+        <div class="skill-set">
+          <?php the_content(); ?>
+        </div>  
+        
+        <?php
+        }
+      }
+      //rememeber to add this to the end of the custom query so that the origional loop
+      //can reset itself.
+      wp_reset_postdata();  
+      ?>
     </div>
     <div id="contact">
+      <?php 
+      //contact posts loop
+      $contactArgs = array(
+        "post_type" => "contact",
+        "posts_per_page" => 1,
+        ); 
+      $contactQuery = new WP_Query($contactArgs);
+      if($contactQuery->have_posts()){
+        while($contactQuery->have_posts()){
+          $contactQuery->the_post();
+        ?>
+        <div class="contact-form clearfix">
+          <?php the_content(); ?>
+        </div>  
+        
+        <?php
+        }
+      }
+      //rememeber to add this to the end of the custom query so that the origional loop
+      //can reset itself.
+      wp_reset_postdata();  
+      ?>
     </div>
   </div> <!-- /.container -->
 </div> <!-- /.main -->
