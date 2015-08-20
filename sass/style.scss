@@ -28,6 +28,8 @@ img {
 
 body {
 	color: #333;
+	// background: blue;
+	font-family: 'Open Sans', sans-serif;
 
 }
 li{
@@ -35,9 +37,6 @@ li{
 }
 a{
 	color: black;
-}
-body{
-	// background: blue;
 }
 
 .main{
@@ -111,7 +110,7 @@ ul.menu li a:hover {
 }
 
 ul.menu li:hover:after {
-	width: 80%;
+	width: 75%;
 }
 
 #menu-item-59 a{
@@ -140,7 +139,8 @@ ul.menu li:hover:after {
 }
 //PORTFOLIO STYLES
 .portfolio-peice{
-	@include shift(-1);
+	@include span-columns (13);
+	@include shift(-1.5);
 	margin-bottom: 2%;
 	overflow: hidden;
 	height: 45vh;
@@ -170,6 +170,9 @@ ul.menu li:hover:after {
 }
 
 //SKILL STYLES
+#skills{
+	clear: both;
+}
 .skill-set{
 	float: left;
 	@include span-columns (3);
