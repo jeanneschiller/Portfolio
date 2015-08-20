@@ -30,7 +30,9 @@ body {
 	color: #333;
 
 }
-
+.main{
+	@include outer-container;
+}
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -92,7 +94,7 @@ ul.menu li a{
 .portfolio-peice{
 	margin-bottom: 2%;
 	overflow: hidden;
-	height: 40vh;
+	height: 45vh;
 	background: blue;
 }
 .portfolio-img{
@@ -105,6 +107,21 @@ ul.menu li a{
 .portfolio-content{
 	float: left;
 	@include span-columns (4);
+}
+
+//SKILL STYLES
+.skill-set{
+	float: left;
+	@include span-columns (3);
+	@include shift (0.5);
+	background:yellow;
+}
+.skill-set img{
+	width: 100%;
+}
+//CONTACT STYLES
+#contact{
+	clear: both;
 }
 //FOOTER STYLES
 footer{

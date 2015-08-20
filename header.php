@@ -28,6 +28,7 @@
       'container' => false,
       'theme_locations' => 'primary'
     )); ?>
+    <?php dynamic_sidebar( 'social-menu' ); ?>
   </div> <!-- /.container -->
 </header><!--/.header-->
 

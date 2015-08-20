@@ -58,6 +58,7 @@
         ?>
         <div class="skill-set">
           <?php the_content(); ?>
+          <?php the_post_thumbnail('medium'); ?>
         </div>  
         
         <?php
@@ -92,6 +93,7 @@
       wp_reset_postdata();  
       ?>
     </div>
+    <?php dynamic_sidebar( 'social-menu' ); ?>
   </div> <!-- /.container -->
 </div> <!-- /.main -->
 
