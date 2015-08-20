@@ -29,10 +29,12 @@
           <div class="portfolio-img">
             <?php the_post_thumbnail('large'); ?>
           </div>
-          <div class="portfolio-content">
-            <h3><?php  the_title(); ?></h3>
-            <?php the_content(); ?>
-            <?php the_meta(); ?>
+          <div class="portfolio-container">
+            <div class="portfolio-content"> 
+              <h3><?php  the_title(); ?></h3>
+              <?php the_content(); ?>
+              <?php the_meta(); ?>
+            </div>  
           </div>
         </div>  
         
