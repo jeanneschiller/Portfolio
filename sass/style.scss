@@ -124,17 +124,15 @@ ul.menu li:after {
 	transition: width 0.5s;
 	padding: 0;
 }
-ul.menu li a:hover {
+ul.menu li:hover:after {
+	width: 75%;
+}
+ul.menu li:hover{
 	font-weight: 700;
 }
 ul.menu li a:focus {
 	font-weight: 700;
 }
-
-ul.menu li:hover:after {
-	width: 75%;
-}
-
 #menu-item-59 a{
 	visibility: hidden;
 	width: 100%;
@@ -146,6 +144,9 @@ ul.menu li:hover:after {
 	background-position: center;
 	background-repeat: no-repeat;
 	width: 100%;
+}
+ul.menu li:nth-child(1):after {
+background:white;
 }
 .textwidget{
 	@include span-columns (2);
@@ -193,6 +194,22 @@ ul.menu li:hover:after {
 	padding-left: 7%;
 	text-align: right;
 }
+// parent nth-child odd 		
+// container 
+// 	blue part: rule
+// 		red part: rule 
+.portfolio-peice:nth-child(even){
+	.portfolio-container:nth-child(even) {
+	    transform: skew(-170deg);
+	}
+	.portfolio-content:nth-child(odd) {
+	    transform: skew(170deg);
+	}
+}
+
+
+
+
 
 //SKILL STYLES
 #skills{
@@ -226,6 +243,34 @@ ul.menu li:hover:after {
 //CONTACT STYLES
 #contact{
 	clear: both;
+}
+form{
+	@include span-columns (10);
+	text-align: center;
+
+}
+input{
+	border: none;
+	border-bottom: 3px solid black;
+}
+.user-area{
+	float: left;
+
+}
+.text-area{
+	float: right;
+
+}
+span.your-message{
+	float: right;
+}
+textarea{
+	border: none;
+	border-top: 3px solid black;
+	border-left: 3px solid black;
+}
+.wpcf7-submit{
+	@include span-columns (12);
 }
 //FOOTER STYLES
 footer{
