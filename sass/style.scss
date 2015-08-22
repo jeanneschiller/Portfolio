@@ -206,10 +206,15 @@ background:white;
 	margin-bottom: 2%;
 	overflow: hidden;
 	height: 50vh;
-	background: white;
 	position: relative;
-	background:white;
+	background: white;
 	
+}
+.portfolio-peice:hover{
+	background: $lightgrey;
+	.portfolio-container{
+		background: $lightgrey;
+	} 
 }
 .portfolio-img{
 	float: left;
@@ -217,7 +222,6 @@ background:white;
 	background: $blue;
 
 }
-
 .portfolio-img img{
 	size: cover;
 	margin-left: 9%;
@@ -345,9 +349,10 @@ footer{
 	background: black;
 	position: fixed;
 	bottom:0;
-	text-align: center;
+	text-align: right;
 	color: white;
 	z-index: 10;
+	padding-right: 3%;
 }
 
 
