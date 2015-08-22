@@ -173,6 +173,33 @@ function hackeryou_widgets_init() {
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
+		register_sidebar( array(
+		'name' => 'Portfolio Link Two',
+		'id' => 'portfolio-link-two',
+		'description' => 'Portfolio Link Two',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+			register_sidebar( array(
+		'name' => 'Portfolio Link Three',
+		'id' => 'portfolio-link-three',
+		'description' => 'Portfolio Link Three',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
+				register_sidebar( array(
+		'name' => 'Portfolio Link Four',
+		'id' => 'portfolio-link-four',
+		'description' => 'Portfolio Link Four',
+		'before_widget' => '<li id="%1$s" class="widget-container %2$s">',
+		'after_widget' => '</li>',
+		'before_title' => '<h3 class="widget-title">',
+		'after_title' => '</h3>',
+	) );
 
 }
 

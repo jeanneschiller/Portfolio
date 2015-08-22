@@ -11,6 +11,31 @@
 
 <div class="main">
   <div class="container">
+    <div id="about">
+      <?php 
+      //contact posts loop
+      $aboutArgs = array(
+        "post_type" => "about",
+        "posts_per_page" => 1,
+        ); 
+      $aboutQuery = new WP_Query($aboutArgs);
+      if($aboutQuery->have_posts()){
+        while($aboutQuery->have_posts()){
+          $aboutQuery->the_post();
+        ?>
+        <div class="about-me">
+          <?php the_post_thumbnail('large'); ?>
+          <div class=" about-me_content">
+            <h1><?php  the_title(); ?></h1>
+            <?php the_content(); ?>
+          </div>
+        </div>  
+        
+        <?php
+        }
+      }
+      wp_reset_postdata();  
+      ?>
     <div id="portfolio">
       <?php 
       //custom posts loop
@@ -28,12 +53,19 @@
         <div class="portfolio-peice clearfix">
           <div class="portfolio-img">
             <?php the_post_thumbnail('large'); ?>
+
           </div>
           <div class="portfolio-container">
+            <div class="portfolio-link">
+              <?php the_field("link_to_live_site"); ?>
+            </div>
             <div class="portfolio-content"> 
               <h3><?php  the_title(); ?></h3>
               <?php the_content(); ?>
-              <?php the_meta(); ?>
+              <div class="technology">
+                <?php the_field("technologies"); ?>
+              </div>
+
             </div>  
           </div>
         </div>  
