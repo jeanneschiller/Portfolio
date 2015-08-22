@@ -36,6 +36,7 @@
       }
       wp_reset_postdata();  
       ?>
+    </div>  
     <div id="portfolio">
       <?php 
       //custom posts loop

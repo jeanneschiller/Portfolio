@@ -168,16 +168,34 @@ background:white;
 .about-me{
 	@include span-columns (13);
 	@include shift(-1.5);
-	// text-align: center;
-	margin: 2%;
-	background:red;
-}
-.about-me p{
-	margin: 0;
-	text-transform: uppercase;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	position: relative;
 }
 .about-me img{
-	size: fill;
+	width: 100%;
+
+}
+.about-me_content{
+	position: absolute;
+	top:5%;
+	@include span-columns (9);
+	@include shift(2);
+	background:white;
+	text-align: center;
+	padding: 5%;
+	margin-top: 20vh;
+	border: 4px solid black;
+}
+.about-me h1{
+	border-bottom: 4px solid black;
+	line-height: 1.5em;
+	display: inline-block;
+
+}
+.about-me p{
+	margin: 2% 0 0 0;
+	//text-transform: uppercase;
 }
 
 //PORTFOLIO STYLES
@@ -190,19 +208,23 @@ background:white;
 	height: 50vh;
 	background: white;
 	position: relative;
-	background:blue;
+	background:white;
 	
 }
 .portfolio-img{
 	float: left;
-	@include span-columns (9);
+	@include span-columns (9.5);
 	background: $blue;
 
 }
+
 .portfolio-img img{
 	size: cover;
 	margin-left: 9%;
 	mix-blend-mode: multiply;
+	-webkit-filter: grayscale(1);
+  	filter: grayscale(1);
+  	padding-left:2%;
 
 }
 .portfolio-container{
@@ -210,7 +232,7 @@ background:white;
 	@include span-columns (3);
 	transform: skew(200deg);
 	height: 50vh;
-	//background: white;
+	background: white;
 	position: absolute;
 	right: 7%;
 	padding-top: 5%;
@@ -245,7 +267,8 @@ background:white;
 	padding: 20px;
 }
 .thechology{
-	border: solid 3px black;
+background: black;
+color: white;
 }
 
 
