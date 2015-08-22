@@ -94,6 +94,7 @@
         <div class="skill-set">
           <?php the_post_thumbnail('medium'); ?>
           <div class="skill-set_content">
+            <?php the_title(); ?>
             <?php the_content(); ?>
           </div>
         </div>  

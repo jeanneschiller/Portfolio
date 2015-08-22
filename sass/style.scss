@@ -208,6 +208,7 @@ background:white;
 	height: 50vh;
 	position: relative;
 	background: white;
+	transition: all 1.75s cubic-bezier(0,0,0,1); 
 	
 }
 .portfolio-peice:hover{
@@ -215,6 +216,13 @@ background:white;
 	.portfolio-container{
 		background: $lightgrey;
 	} 
+	.portfolio-img{
+		background: white;
+	}
+	.portfolio-img img{
+		filter: grayscale(0);
+		-webkit-filter: grayscale(0);
+	}
 }
 .portfolio-img{
 	float: left;
@@ -240,6 +248,7 @@ background:white;
 	position: absolute;
 	right: 7%;
 	padding-top: 5%;
+	transition: all 1.75s cubic-bezier(0,0,0,1); 
 }
 .portfolio-content{
 	transform: skew(-200deg);
@@ -286,7 +295,7 @@ color: white;
 	@include span-columns (3);
 	@include shift (0.5);
 	position: relative;
-	transition: all 2s cubic-bezier(0,0,0,1); 
+	transition: all 1.75s cubic-bezier(0,0,0,1); 
 	margin-top: 50px;
 	margin-bottom: 50px;
 
@@ -307,40 +316,18 @@ color: white;
 
 //CONTACT STYLES
 #contact{
-	clear: both;
+	clear: both;	
+	@include span-columns (13);
+	@include shift(-1.5);
+	text-align: center;
+	padding: 5%;
+	background: $lightgrey;
+	margin-bottom: 10vh;
 }
 .contact-form{
-	@include span-columns (10);
-	text-align: center;
-	margin-bottom: 5vh;
-}
-form{
-	@include span-columns (10);
-	text-align: center;
+	@include span-columns (9);
+	@include shift(2);
 
-}
-input{
-	border: none;
-	border-bottom: 3px solid black;
-}
-.user-area{
-	float: left;
-
-}
-.text-area{
-	float: right;
-
-}
-span.your-message{
-	float: right;
-}
-textarea{
-	border: none;
-	border-top: 3px solid black;
-	border-left: 3px solid black;
-}
-.wpcf7-submit{
-	@include span-columns (12);
 }
 //FOOTER STYLES
 footer{
@@ -350,7 +337,7 @@ footer{
 	position: fixed;
 	bottom:0;
 	text-align: right;
-	color: white;
+	color: grey;
 	z-index: 10;
 	padding-right: 3%;
 }
