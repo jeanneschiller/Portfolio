@@ -339,19 +339,26 @@ color: white;
 	@include span-columns (13);
 	@include shift(-1.5);
 	text-align: center;
-	padding: 5%;
-	background: $lightgrey;
+	padding: 2%;
 	margin-bottom: 10vh;
-
+	transition: all 0.75s cubic-bezier(0,0,0,1); 
+}
+#contact:hover{
+	background: $lightgrey;
 }
 .contact-form{
 	@include span-columns (9);
 	@include shift(2);
-	background: white;
 }
 .contact-form h2{
-	text-transform: none;
 	border: none;
+	margin-bottom: 0;
+}
+.contact-form p{
+	text-transform: none;
+	border: 3px solid black;
+	display: inline-block;
+	padding: 2%;
 }
 //FOOTER STYLES
 footer{
