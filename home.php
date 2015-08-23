@@ -61,7 +61,7 @@
               <?php the_field("link_to_live_site"); ?>
             </div>
             <div class="portfolio-content"> 
-              <h3><?php  the_title(); ?></h3>
+              <h2><?php  the_title(); ?></h2>
               <?php the_content(); ?>
               <div class="technology">
                 <?php the_field("technologies"); ?>
@@ -94,7 +94,7 @@
         <div class="skill-set">
           <?php the_post_thumbnail('medium'); ?>
           <div class="skill-set_content">
-            <?php the_title(); ?>
+            <h3><?php the_title(); ?></h3>
             <?php the_content(); ?>
           </div>
         </div>  
@@ -120,7 +120,8 @@
           $contactQuery->the_post();
         ?>
         <div class="contact-form clearfix">
-          <?php the_content(); ?>
+          <h2><?php the_title(); ?></h2>
+          <h2><?php the_content(); ?></h2>
         </div>  
         
         <?php
