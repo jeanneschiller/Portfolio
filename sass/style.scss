@@ -48,6 +48,7 @@ h2{
 	text-transform: uppercase;
 	border-right: solid 3px black ;
 	padding-right: 2%;
+	font-size: 20px;
 }//heading for portfolio items
 h3{
 	margin-bottom:0;
@@ -60,6 +61,7 @@ a:hover{
 }
 i.fa{
 	font-size: 25px;
+	padding: 0 1% 0 1%;
 }
 i.fa:hover{
 	border-bottom: solid 3px black;
@@ -208,17 +210,18 @@ background:white;
 }
 
 //PORTFOLIO STYLES
-
+#portfolio{
+	border-top: 20px solid white;
+}
 .portfolio-peice{
 	@include span-columns (13);
 	@include shift(-1.5);
-	margin-bottom: 2%;
+	//margin-top: 2%;
 	overflow: hidden;
-	height: 45vh;
+	height: 50vh;
 	position: relative;
 	background: white;
 	transition: all 0.75s cubic-bezier(0,0,0,1); 
-	
 }
 .portfolio-peice:hover{
 	background: $lightgrey;
@@ -253,11 +256,11 @@ background:white;
 	float: left;
 	@include span-columns (3);
 	transform: skew(200deg);
-	height: 45vh;
+	height: 50vh;
 	background: white;
 	position: absolute;
 	right: 7%;
-	padding-top: 5%;
+	padding-top: 3%;
 	transition: all 0.75s cubic-bezier(0,0,0,1); 
 }
 .portfolio-content{
@@ -289,7 +292,7 @@ background:white;
 	width: 200px;
 	position: absolute;
 	left: -200px;
-	bottom: 2%;
+	bottom: 5%;
 	height: auto;
 	padding: 20px;
 	text-align: center;
@@ -297,9 +300,12 @@ background:white;
 .portfolio-link p{
 	margin: 0;
 }
-.thechology{
-background: black;
+.technology p{
+background-color: black;
 color: white;
+display: inline-block;
+margin:2% 0 0 2%;
+padding: 1% 3%;
 }
 
 
@@ -338,27 +344,40 @@ color: white;
 	clear: both;	
 	@include span-columns (13);
 	@include shift(-1.5);
-	text-align: center;
-	padding: 2%;
-	margin-bottom: 10vh;
-	transition: all 0.75s cubic-bezier(0,0,0,1); 
+	
 }
-#contact:hover{
+.contact-form:hover{
 	background: $lightgrey;
 }
 .contact-form{
 	@include span-columns (9);
 	@include shift(2);
+	text-align: center;
+	padding: 2%;
+	
+	transition: all 0.75s cubic-bezier(0,0,0,1); 
 }
 .contact-form h2{
 	border: none;
 	margin-bottom: 0;
+	//text-transform: capitalize;
 }
 .contact-form p{
 	text-transform: none;
 	border: 3px solid black;
 	display: inline-block;
 	padding: 2%;
+}
+.photo{
+	margin: 2%;
+	@include span-columns (3);
+	@include shift(5);
+	margin-bottom: 10vh;
+}
+.photo img{
+	background: no-repeat center;
+	background-image: url(images/PAM_2432.jpg);
+	background-size: 100%;
 }
 //FOOTER STYLES
 footer{

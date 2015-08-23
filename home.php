@@ -37,7 +37,7 @@
       wp_reset_postdata();  
       ?>
     </div>  
-    <div id="portfolio">
+    <div>
       <?php 
       //custom posts loop
       $portfolioArgs = array(
@@ -51,12 +51,12 @@
         while($portfolioQuery->have_posts()){
           $portfolioQuery->the_post();
         ?>
-        <div class="portfolio-peice clearfix">
+        <div class="portfolio-peice clearfix" id="portfolio">
           <div class="portfolio-img">
             <?php the_post_thumbnail('large'); ?>
 
           </div>
-          <div class="portfolio-container">
+          <div class="portfolio-container ">
             <div class="portfolio-link">
               <?php the_field("link_to_live_site"); ?>
             </div>
@@ -66,7 +66,6 @@
               <div class="technology">
                 <?php the_field("technologies"); ?>
               </div>
-
             </div>  
           </div>
         </div>  
@@ -122,8 +121,10 @@
         <div class="contact-form clearfix">
           <h2><?php the_title(); ?></h2>
           <h2><?php the_content(); ?></h2>
-        </div>  
-        
+        </div>
+        <div class="photo">
+          <?php// the_post_thumbnail('medium'); ?>  
+        </div>
         <?php
         }
       }
