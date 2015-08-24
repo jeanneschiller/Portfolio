@@ -106,7 +106,7 @@
       wp_reset_postdata();  
       ?>
     </div>
-    <div id="contact">
+    <div id="contact" class="clearfix">
       <?php 
       //contact posts loop
       $contactArgs = array(

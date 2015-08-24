@@ -130,12 +130,46 @@
 	}
 }
 @media (max-width: 460px) {
+	.menu{
+		font-size: 0.8em;
+		text-transform: capitalize;
+	}
+	.menu a{
+		margin: 1%;
+	}
+	.portfolio-peice{
+	height: 100vh;
+	}
 	.portfolio-img{
 		@include span-columns (12);
 	}
 	.portfolio-container{
-		@include span-columns (12);
+		@include span-columns (13);
+		@include shift (2);
 		height: 25vh;
+		position: absolute;
+		bottom: 0;
+		right:0;
+		height: 50vh;
+		width: 100%
+	}
+	.portfolio-content{
+		padding-right: 2%;
+	}
+	#menu-item-80{
+		display: none;
+		visibility: hidden;
+	}
+	.skill-set img{
+		visibility: hidden;
+		
+	}
+	.skill-set_content{
+		top: 9%;
+		bottom: 0;
+	}
+	.portfolio-link{
+		left: 0;
 	}
 	
 }
