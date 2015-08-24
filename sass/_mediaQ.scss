@@ -1,0 +1,72 @@
+//MEDIA QUERIE 
+@media (max-width: 1200px) {
+	.skill-set {
+	@include span-columns (3.5);
+	@include shift (0.25);
+	}
+
+}	
+
+@media (max-width: 1034px) {
+	.menu{
+		@include span-columns (12);
+		height: 15vh;
+		background: white;
+		position: fixed;
+		top:0;
+		left:0;
+		float: left;
+		z-index: 5;
+	}
+	ul.menu{
+	text-align: left;
+	@include shift (0);
+	padding-top: 2%;
+	}
+	ul.menu li{
+		margin:0;
+		display: inline-block;
+	}
+	.home-link-icon {
+		padding: 20px 0 !important;
+		background: url(images/JS-H.png);
+		background-size: 100%;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 50px;
+	}
+	.textwidget{
+	@include span-columns (2);
+	@include shift (9.5);
+	height: 10vh;
+	padding: 20px 0 0 0; 
+	background: white;
+	position: fixed;
+	top:0;
+	margin-top: 2%;
+	text-align: right;
+	}
+	//ABOUT ME
+	.container {
+	@include span-columns (12);
+	@include shift (0);
+	padding-bottom: 0;
+	}
+
+	.about-me{
+	@include span-columns (12);
+	@include shift(0);
+	}
+	#portfolio{
+	border-top: none;
+	}
+	.portfolio-peice{
+	@include span-columns (12);
+	@include shift(0);
+	}
+	.portfolio-img{
+	float: left;
+	@include span-columns (10);
+	@include shift(-0.5);
+	}
+}
