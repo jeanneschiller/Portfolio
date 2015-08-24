@@ -22,10 +22,12 @@
 	text-align: left;
 	@include shift (0);
 	padding-top: 2%;
+	height: 20vh;
 	}
 	ul.menu li{
-		margin:0;
 		display: inline-block;
+		padding: 0;
+		margin: 0 2%;
 	}
 	.home-link-icon {
 		padding: 20px 0 !important;
@@ -129,13 +131,21 @@
 	@include shift (0);
 	}
 }
-@media (max-width: 460px) {
+@media (max-width:540px) {
+	i.fa{
+	font-size: 18px;
+	padding: 0 2%;
+	}
+}
+
+@media (max-width: 495px) {
 	.menu{
 		font-size: 0.8em;
 		text-transform: capitalize;
 	}
-	.menu a{
-		margin: 1%;
+	ul.menu li{
+		padding: 0;
+		margin: 0 2%;
 	}
 	.portfolio-peice{
 	height: 100vh;
@@ -160,16 +170,31 @@
 		display: none;
 		visibility: hidden;
 	}
+	.skill-set{
+		margin-top: 5%;
+		@include span-columns (12);
+		margin-bottom: 0;
+	}
 	.skill-set img{
 		visibility: hidden;
-		
 	}
 	.skill-set_content{
 		top: 9%;
 		bottom: 0;
 	}
+	.technology p{
+	display:none;
+	visibility: hidden;
+	}
 	.portfolio-link{
 		left: 0;
 	}
-	
+	.contact-form{
+		margin-top: 7%;
+		background: $lightgrey;
+	}
+	footer{
+		font-size: 0.8em;
+	}
+
 }
