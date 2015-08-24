@@ -206,7 +206,6 @@ background:white;
 }
 .about-me p{
 	margin: 2% 0 0 0;
-	//text-transform: uppercase;
 }
 
 //PORTFOLIO STYLES
@@ -337,8 +336,6 @@ padding: 1% 3%;
 	text-align: center;
 	margin: 0;
 }
-
-
 //CONTACT STYLES
 #contact{
 	clear: both;	
@@ -354,7 +351,6 @@ padding: 1% 3%;
 	@include shift(2);
 	text-align: center;
 	padding: 2%;
-	
 	transition: all 0.75s cubic-bezier(0,0,0,1); 
 }
 .contact-form h2{
