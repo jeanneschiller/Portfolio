@@ -126,6 +126,13 @@
 	@include span-columns (4);
 	@include shift (0);
 	}
+	.contact-form{
+		background: $lightgrey;
+	}
+	.contact-form p{
+		background-color: $yellow;
+		border: 3px solid $lightgrey;
+	}
 }
 @media (max-width:540px) {
 	i.fa{
